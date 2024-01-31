@@ -1,7 +1,9 @@
 import os
 os.system('git clone https://github.com/facebookresearch/detectron2.git')
+os.system("git clone https://github.com/microsoft/unilm.git")
 os.system('pip install -e detectron2')
 import sys
+sys.path.append("unilm")
 sys.path.append("detectron2")
 from unilm.dit.object_detection.ditod import add_vit_config
 import torch
